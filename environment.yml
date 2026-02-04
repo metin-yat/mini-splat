@@ -1,0 +1,19 @@
+name: gsplat
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1
+  - pip
+  - pip:
+      - python-dotenv 
+      - numpy
+      - opencv-python
+      - plyfile       
+      - tqdm
+      - matplotlib
