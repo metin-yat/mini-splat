@@ -26,9 +26,9 @@ python train.py
 
 The system optimizes Gaussian parameters by minimizing the discrepancy between rendered views and ground-truth images. The training relies on a composite loss function:
 
-\[
+$$
 \mathcal{L} = (1 - \lambda) \mathcal{L}_1 + \lambda \mathcal{L}_{D-SSIM}
-\]
+$$
 
 - **\(\mathcal{L}_1\) (Mean Absolute Error):** Ensures pixel-level color accuracy.  
 - **\(\mathcal{L}_{D-SSIM}\):** Maintains structural integrity and high-frequency textures, preventing the model from producing "smeared" geometry.
@@ -49,7 +49,7 @@ The core of the learning process is the "Painter-Critic" loop, where every rende
 
 ## Performance & Severe Hardware Constraints
 
-![Example Output](https://github.com/metin-yat/mini-splat/final_result.png)
+![Example Output](https://github.com/metin-yat/mini-splat/blob/main/final_result.png)
 
 Due to significant hardware limitations and the high computational overhead of a non-optimized Python/PyTorch rasterizer, this demonstration utilizes a sparse set of only **500 Gaussians**. Consequently, the rendered images will appear significantly blurry and "cloudy." This is a direct result of under-parameterization and the inability to run the high-resolution, high-iteration training cycles required to resolve fine details. The system is currently capped by consumer-grade VRAM limits and the interpreter-bound nature of the custom rendering loop, preventing the dense point-cloud representation typical of production-level 3DGS.
 
