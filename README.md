@@ -30,8 +30,8 @@ $$
 \mathcal{L} = (1 - \lambda) \mathcal{L}_1 + \lambda \mathcal{L}_{D-SSIM}
 $$
 
-- **\(\mathcal{L}_1\) (Mean Absolute Error):** Ensures pixel-level color accuracy.  
-- **\(\mathcal{L}_{D-SSIM}\):** Maintains structural integrity and high-frequency textures, preventing the model from producing "smeared" geometry.
+- **L1 (Mean Absolute Error):** Ensures pixel-level color accuracy.  
+- **SSIM:** Maintains structural integrity and high-frequency textures, preventing the model from producing "smeared" geometry.
 
 
 
